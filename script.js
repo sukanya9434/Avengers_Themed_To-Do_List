@@ -5,7 +5,7 @@ const adding=document.querySelector('.Add');
 const box=document.querySelector('#Greet');
 const show= document.createElement('h1');
 
-  const current = new Date();
+  const current = new Date(); //Used date function to greet
  const hour=current.getHours();
 
   if(hour>=4 && hour<12){
@@ -21,7 +21,7 @@ else if(hour>=17 || hour<4){
 box.appendChild(show);
 
 
-let created=false;
+let created=false; //creating add button on typing in the input field
 input.addEventListener('input',()=>{
 if (!created){
     const add=document.createElement('button');
@@ -46,8 +46,8 @@ input.value="";
 localStorage.setItem("task",items.innerHTML);
 }})
 }})
-   let checked=false;
-items.addEventListener('click',
+  
+items.addEventListener('click', //list creation
     function(e){
      
      if( e.target.style.textDecoration ==="line-through"){
@@ -56,7 +56,7 @@ items.addEventListener('click',
         else if(e.target.tagName==="LI"){
     e.target.style.textDecoration ="line-through";
     localStorage.setItem("task",items.innerHTML);
-    checked=true;
+  
         }
        else if(e.target.tagName==="IMG"){
             e.target.parentElement.remove();
@@ -65,6 +65,6 @@ items.addEventListener('click',
     }
 )
 
-items.innerHTML=localStorage.getItem("task");
+items.innerHTML=localStorage.getItem("task"); //helps showing the same tasks as left on reload
 
 
