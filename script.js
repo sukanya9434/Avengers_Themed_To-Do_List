@@ -29,7 +29,7 @@ add.innerHTML=`add`;
     adding.appendChild(add);
     created=true;
 
-add.addEventListener('click',function(e){
+add.addEventListener('click',function(e){ //create list
    if(input.value===""){
     alert("Please type your task in box");}
     else{
@@ -47,7 +47,7 @@ localStorage.setItem("task",items.innerHTML);
 }})
 }})
   
-items.addEventListener('click', //list creation
+items.addEventListener('click', //for performing operations on list
     function(e){
      
      if( e.target.style.textDecoration ==="line-through"){
