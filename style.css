@@ -57,7 +57,6 @@ li{
   display:flex;
    gap:10px;
   justify-content:space-between;
-  /* box-shadow: 1px 1px rgb(243, 224, 170);*/
   padding: 10px;
    background-color: rgb(255, 255, 241);
    border-radius: 5px;
