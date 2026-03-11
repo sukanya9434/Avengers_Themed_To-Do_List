@@ -20,16 +20,16 @@ else if(hour>=17 || hour<4){
 
 box.appendChild(show);
 
-
-let created=false; //creating add button on typing in the input field
-input.addEventListener('input',()=>{
-if (!created){
-    const add=document.createElement('button');
+const add=document.createElement('button');
 add.innerHTML=`add`;
+let added=false; //creating add button on typing in the input field
+input.addEventListener('input',()=>{
+if (!added){
     adding.appendChild(add);
-    created=true;
-
-add.addEventListener('click',function(e){ //create list
+    added=true;
+}
+})
+add.addEventListener('click',function(e){ //creating list
    if(input.value===""){
     alert("Please type your task in box");}
     else{
@@ -45,7 +45,7 @@ items.appendChild(list);
 input.value="";
 localStorage.setItem("task",items.innerHTML);
 }})
-}})
+  
   
 items.addEventListener('click', //for performing operations on list
     function(e){
