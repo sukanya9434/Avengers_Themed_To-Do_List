@@ -46,6 +46,7 @@ input.value="";
 localStorage.setItem("task",items.innerHTML);
 }})
   
+  
 items.addEventListener('click', //for performing operations on list
     function(e){
      
