@@ -29,7 +29,7 @@ if (!added){
     added=true;
 }
 })
-add.addEventListener('click',function(e){
+add.addEventListener('click',function(e){ //creating list
    if(input.value===""){
     alert("Please type your task in box");}
     else{
@@ -46,7 +46,7 @@ input.value="";
 localStorage.setItem("task",items.innerHTML);
 }})
   
-items.addEventListener('click', //list creation
+items.addEventListener('click', //for performing operations on list
     function(e){
      
      if( e.target.style.textDecoration ==="line-through"){
